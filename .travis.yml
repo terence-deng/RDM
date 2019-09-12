@@ -1,0 +1,20 @@
+matrix:
+  include:
+    - os: osx
+      osx_image: xcode10.2
+    - os: osx
+      osx_image: xcode9.4
+    - os: osx
+      osx_image: xcode8.3
+
+language: c
+
+script:
+  - make
+
+notifications:
+  email:
+    recipients:
+      - deng.tulin@icloud.com
+    on_success: never # default: change
+    on_failure: always # default: always
